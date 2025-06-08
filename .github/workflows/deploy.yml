@@ -121,7 +121,7 @@ jobs:
       - name: Verificar e criar repositório no Docker Hub (se necessário)
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo "Verificando repositório: $REPO_NAME"
           RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -u $DOCKERHUB_USERNAME:$DOCKERHUB_TOKEN \
