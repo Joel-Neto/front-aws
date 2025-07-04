@@ -27,6 +27,7 @@ function App() {
 
     fetchData();
   }, []);
+  
 
   return (
     <Container>
